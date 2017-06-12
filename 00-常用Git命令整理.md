@@ -23,7 +23,7 @@ git log -p                                            # 显示文件的改动
 git log --graph                                       # 用图形查看
 git log --pretty=oneline                              # 查看简要信息
 git merge branch_name                                 # 在master分支下进行，合并分支
-git merge --no--ff -m "merge log"                     # 禁用Fast forward模式，并生成一个commit
+git merge --no--ff -m "merge_log" branch_name         # 禁用Fast forward模式，并生成一个commit
 git pull origin branch_name                           # 从远程仓库抓取最新数据并自动与本地分支进行合并
 git pull --rebase origin branch_name                  # 第一次拉取的时候先将本地与远程同步
 git push origin branch_name                           # 将本地仓库推送到远程仓库中
