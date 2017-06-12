@@ -15,7 +15,7 @@ def track(func):
     @functools.wraps(func)
     def inner(*args):
         result = func(*args)
-        print("{} -> ({}) -> {} ".format(func.__name__, args[0], result))
+        print("{} --> ({}) --> {} ".format(func.__name__, args[0], result))
         return result
     return inner
 ```
@@ -64,35 +64,35 @@ fib(10)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
         
 # 追踪结果
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
-fib -> (1) -> 1 
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
-fib -> (3) -> 2 
-fib -> (4) -> 3 
-fib -> (1) -> 1 
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
-fib -> (3) -> 2 
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
-fib -> (1) -> 1 
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
-fib -> (3) -> 2 
-fib -> (4) -> 3 
-fib -> (5) -> 5 
-fib -> (6) -> 8 
-fib -> (1) -> 1 
-fib -> (0) -> 0 
-fib -> (1) -> 1 
-fib -> (2) -> 1 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
+fib --> (1) --> 1 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
+fib --> (3) --> 2 
+fib --> (4) --> 3 
+fib --> (1) --> 1 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
+fib --> (3) --> 2 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
+fib --> (1) --> 1 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
+fib --> (3) --> 2 
+fib --> (4) --> 3 
+fib --> (5) --> 5 
+fib --> (6) --> 8 
+fib --> (1) --> 1 
+fib --> (0) --> 0 
+fib --> (1) --> 1 
+fib --> (2) --> 1 
 往后的省略...
 ```  
 fib(10) 调用了 **177** 次， 共花费了 **0.007** 秒  
@@ -122,17 +122,17 @@ fib_with_cache(10)
         1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
 
 # 追踪结果
-fib_with_cache -> (0) -> 0 
-fib_with_cache -> (1) -> 1 
-fib_with_cache -> (2) -> 1 
-fib_with_cache -> (3) -> 2 
-fib_with_cache -> (4) -> 3 
-fib_with_cache -> (5) -> 5 
-fib_with_cache -> (6) -> 8 
-fib_with_cache -> (7) -> 13 
-fib_with_cache -> (8) -> 21 
-fib_with_cache -> (9) -> 34 
-fib_with_cache -> (10) -> 55 
+fib_with_cache --> (0) --> 0 
+fib_with_cache --> (1) --> 1 
+fib_with_cache --> (2) --> 1 
+fib_with_cache --> (3) --> 2 
+fib_with_cache --> (4) --> 3 
+fib_with_cache --> (5) --> 5 
+fib_with_cache --> (6) --> 8 
+fib_with_cache --> (7) --> 13 
+fib_with_cache --> (8) --> 21 
+fib_with_cache --> (9) --> 34 
+fib_with_cache --> (10) --> 55 
 ```
 可以很明显的看到，使用缓存的时候，只调用了 **11** 次就得出了结果，并且花费时间只为 **0.002** 秒
 
