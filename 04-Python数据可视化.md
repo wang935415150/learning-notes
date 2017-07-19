@@ -39,7 +39,7 @@ bar.render()
 
 
 # 图表类型
-因篇幅原因，这里只给出了每种图表类型的示例（代码 + 生成图表）。详细参数的介绍请参考项目 [README.md](https://github.com/chenjiandongx/pyecharts/blob/master/README.md) 文档
+因篇幅原因，这里只给出了每种图表类型的示例（代码 + 生成图表），目的是为了引起读者的兴趣。详细参数的介绍请参考项目 [README.md](https://github.com/chenjiandongx/pyecharts/blob/master/README.md) 文档
 
 ## Bar（柱状图/条形图）
 ```python
@@ -220,6 +220,16 @@ liquid.show_config()
 liquid.render()
 ```
 ![liquid-0](https://github.com/chenjiandongx/pyecharts/blob/master/images/liquid-0.gif)
+
+```python
+from pyecharts import Liquid
+
+liquid = Liquid("水球图示例")
+liquid.add("Liquid", [0.6, 0.5, 0.4, 0.3], is_liquid_outline_show=False)
+liquid.show_config()
+liquid.render()
+```
+![liquid-1](https://github.com/chenjiandongx/pyecharts/blob/master/images/liquid-1.gif)
 
 ```python
 from pyecharts import Liquid
