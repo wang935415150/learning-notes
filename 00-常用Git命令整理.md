@@ -50,9 +50,9 @@ git stash pop                                         # 恢复现场并删除sta
 git show commit -commit_id                            # 查看指定id的提交信息
 git show -all                                         # 显示提交历史
 
-git config --global user.name "your_name"             # 配置github账号
-git config --global user.email "your_email"           # 配置github邮箱
+git config --global user.name "your_name"             # 配置Github账号
+git config --global user.email "your_email"           # 配置Github邮箱
 ssh-keygen -t rsa -C "your_email"                     # 设置ssh key
 cat ~/.ssh/id_rsa.pub                                 # 查看ssh公钥
-ssh -T git@github.com                                 # 与github进行验证
+ssh -T git@github.com                                 # 与Github进行验证
 ```
