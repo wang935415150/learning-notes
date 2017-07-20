@@ -5,7 +5,7 @@ Echarts 是百度开源的一个数据可视化 JS 库。主要用于数据可�
 
 
 # 安装
-pyecharts 兼容 Python2 和 Python3。目前版本为 0.1.2
+pyecharts 兼容 Python2 和 Python3。目前版本为 0.1.4
 ```python
 pip install pyecharts
 ```
